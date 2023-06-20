@@ -24,8 +24,8 @@ class DataValidation:
     def validate_number_of_columns(self,dataframe:pd.DataFrame)->bool:
         try:
             number_of_columns = len(self._schema_config['columns'])
-            logging.info("Required number of columns:{number_of_columns}")
-            logging.info("Data frame has columns :{len(dataframe.columns)}")
+            logging.info(f"Required number of columns:{number_of_columns}")
+            logging.info(f"Data frame has columns :{len(dataframe.columns)}")
             if len(dataframe.columns)==number_of_columns:
                 return True
             return False
@@ -43,7 +43,7 @@ class DataValidation:
                 if num_column not in dataframe_columns:
                     numerical_columns_present=False
                     missing_numerical_columns.append(num_column)
-            logging.info("Missing numerical_columns: [{missing_numerical_columns}]")
+            logging.info(f"Missing numerical_columns: [{missing_numerical_columns}]")
             return numerical_columns_present
         except Exception as e:
             raise SensorException(e,sys)
@@ -121,6 +121,8 @@ class DataValidation:
             )
 
             logging.info(f"Data validation artifact: {data_validation_artifact}")
+
+            return data_validation_artifact
 
         except Exception as e:
             raise SensorException(e,sys)

@@ -42,7 +42,7 @@ list_of_files=[
     f"{project_name}/ml/metric/__init__.py",
     f"{project_name}/ml/metric/classification_metric.py",
     f"{project_name}/ml/model/__init__.py",
-    f"{project_name}/ml/metric/estimator.py",
+    f"{project_name}/ml/model/estimator.py",
     "main.py",
     "Dockerfile",
     "requirements.txt",
