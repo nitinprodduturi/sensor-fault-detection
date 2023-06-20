@@ -11,7 +11,7 @@ class TargetValueMapping:
     
     def reverse_mapping(self):
         mapping_response=self.to_dict()
-        return dict(mapping_response.values(),mapping_response.keys())
+        return dict(zip(mapping_response.values(), mapping_response.keys()))
     
 class SensorModel:
 
