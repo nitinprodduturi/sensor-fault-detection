@@ -17,6 +17,15 @@ class SensorModel:
 
     def __init__(self,preprocesser,model):
         try:
-            pass
+            self.preprocesser = preprocesser
+            self.model=model
+        except Exception as e:
+            raise e
+        
+    def predict(self,x):
+        try:
+            x_transform = self.preprocesser.transform(x)
+            y_hat=self.model.predict(x_transform)
+            return y_hat
         except Exception as e:
             raise e
