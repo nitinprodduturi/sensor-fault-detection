@@ -8,7 +8,7 @@ logging.basicConfig(level=logging.INFO,format='[%(asctime)s]:%(message)s:')
 project_name="sensor"
 
 list_of_files=[
-    #".github/workflows/.gitkeep",
+    ".github/workflows/main.yml",
     f"{project_name}/__init__.py",
     f"{project_name}/exception.py",
     f"{project_name}/logger.py",

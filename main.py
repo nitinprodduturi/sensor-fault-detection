@@ -91,6 +91,6 @@ async def predict_route(request:Request,file:UploadFile=File(...)):
 #         raise SensorException(e,sys)
 
 if __name__ == '__main__':
-    set_env_variable(env_file_path)
+    #set_env_variable(env_file_path)
     # main()
     app_run(app,host=APP_HOST,port=APP_PORT)
